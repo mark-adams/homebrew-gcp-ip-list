@@ -10,7 +10,7 @@ class GcpIpList < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/mark-adams/gcp-ip-list/releases/download/v0.0.1/gcp-ip-list_Darwin_x86_64.tar.gz"
-      sha256 "7a59d7fb91eca96ff05f16597641343de75ee272dcb614d37418ec8710dc852d"
+      sha256 "bf19a6363c566983a323e633e420034cb77637c110e5accaf7cc39ba50350d76"
 
       def install
         bin.install "gcp-ip-list"
@@ -18,7 +18,7 @@ class GcpIpList < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/mark-adams/gcp-ip-list/releases/download/v0.0.1/gcp-ip-list_Darwin_arm64.tar.gz"
-      sha256 "d56c6f9aabe153b0ae0241d7624130e9570d6268248c4af03d318001082af885"
+      sha256 "7aa74f309efa2d3f12fa49fcd432ae07772dd7b8a72b3b192d978339a6834970"
 
       def install
         bin.install "gcp-ip-list"
@@ -30,7 +30,7 @@ class GcpIpList < Formula
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
         url "https://github.com/mark-adams/gcp-ip-list/releases/download/v0.0.1/gcp-ip-list_Linux_x86_64.tar.gz"
-        sha256 "7cdc2a22ae10132f9c71cac28bbe4d239643ffcc4a96d26a9bdaa9709792be0d"
+        sha256 "2d3386aed0c3591519b810399209491679147572713c57414c5e313b1e3da43b"
 
         def install
           bin.install "gcp-ip-list"
@@ -40,7 +40,7 @@ class GcpIpList < Formula
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
         url "https://github.com/mark-adams/gcp-ip-list/releases/download/v0.0.1/gcp-ip-list_Linux_arm64.tar.gz"
-        sha256 "6ee4edee51f0ff0b4062e6a9eaec35b191d8cfa742dbc9c2b17687042df2ff9e"
+        sha256 "ac80959bc8029de78444d59bfd62eca6246e06a8a77c40fcaa99151eb0fd9920"
 
         def install
           bin.install "gcp-ip-list"
