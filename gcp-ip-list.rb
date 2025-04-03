@@ -5,20 +5,20 @@
 class GcpIpList < Formula
   desc ""
   homepage ""
-  version "0.0.1"
+  version "1.0.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/mark-adams/gcp-ip-list/releases/download/v0.0.1/gcp-ip-list_Darwin_x86_64.tar.gz"
-      sha256 "b69d6463416c7895e1c9b9d037c7e62f0f86ce762ad76ca72b699ab6ddee5443"
+      url "https://github.com/mark-adams/gcp-ip-list/releases/download/v1.0.0/gcp-ip-list_Darwin_x86_64.tar.gz"
+      sha256 "40ded0ca1ef370e727d0028e54e34487efcfb67fb1c9eb624ff80dd7d8314437"
 
       def install
         bin.install "gcp-ip-list"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/mark-adams/gcp-ip-list/releases/download/v0.0.1/gcp-ip-list_Darwin_arm64.tar.gz"
-      sha256 "537829a932f5e91bcfd3859eaa286b3c2aae8e8a4b4270633aa6ccf555d83cb6"
+      url "https://github.com/mark-adams/gcp-ip-list/releases/download/v1.0.0/gcp-ip-list_Darwin_arm64.tar.gz"
+      sha256 "528fe6d41aaa33806f37414845908bfd56510186b51c51d2576265e6a4e52a65"
 
       def install
         bin.install "gcp-ip-list"
@@ -29,8 +29,8 @@ class GcpIpList < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/mark-adams/gcp-ip-list/releases/download/v0.0.1/gcp-ip-list_Linux_x86_64.tar.gz"
-        sha256 "4b5191c05e928b193339bc9e050e4bd2b26d30bd2048c2fbac093f356b338241"
+        url "https://github.com/mark-adams/gcp-ip-list/releases/download/v1.0.0/gcp-ip-list_Linux_x86_64.tar.gz"
+        sha256 "795531c7858c5566827e129bfed2ffbe309a11b1dee4400a172711a12e3e30e2"
 
         def install
           bin.install "gcp-ip-list"
@@ -39,8 +39,8 @@ class GcpIpList < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/mark-adams/gcp-ip-list/releases/download/v0.0.1/gcp-ip-list_Linux_arm64.tar.gz"
-        sha256 "802e7a4e131447f93eaec137ebb2cfef6d1871783957beb66652b825065579bc"
+        url "https://github.com/mark-adams/gcp-ip-list/releases/download/v1.0.0/gcp-ip-list_Linux_arm64.tar.gz"
+        sha256 "fdde1f232da7372571a8c09674edc6bd081d4f46c654f657054de73f8e6e2939"
 
         def install
           bin.install "gcp-ip-list"
