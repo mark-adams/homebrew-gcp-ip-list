@@ -6,25 +6,45 @@ class GcpIpList < Formula
   desc ""
   homepage ""
   version "0.0.1"
-  depends_on :linux
 
-  if Hardware::CPU.intel?
-    if Hardware::CPU.is_64_bit?
-      url "https://github.com/mark-adams/gcp-ip-list/releases/download/v0.0.1/gcp-ip-list_Linux_x86_64.tar.gz"
-      sha256 "75cd565d10a781bf7a4f0daf28e24fc9c10f2c33f060d402ef2b639571051677"
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/mark-adams/gcp-ip-list/releases/download/v0.0.1/gcp-ip-list_Darwin_x86_64.tar.gz"
+      sha256 "7a59d7fb91eca96ff05f16597641343de75ee272dcb614d37418ec8710dc852d"
+
+      def install
+        bin.install "gcp-ip-list"
+      end
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/mark-adams/gcp-ip-list/releases/download/v0.0.1/gcp-ip-list_Darwin_arm64.tar.gz"
+      sha256 "d56c6f9aabe153b0ae0241d7624130e9570d6268248c4af03d318001082af885"
 
       def install
         bin.install "gcp-ip-list"
       end
     end
   end
-  if Hardware::CPU.arm?
-    if Hardware::CPU.is_64_bit?
-      url "https://github.com/mark-adams/gcp-ip-list/releases/download/v0.0.1/gcp-ip-list_Linux_arm64.tar.gz"
-      sha256 "3c917b86766858edbab973dab28fd0ddde352b1b4bcafc8719c5394dea67112c"
 
-      def install
-        bin.install "gcp-ip-list"
+  on_linux do
+    if Hardware::CPU.intel?
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/mark-adams/gcp-ip-list/releases/download/v0.0.1/gcp-ip-list_Linux_x86_64.tar.gz"
+        sha256 "7cdc2a22ae10132f9c71cac28bbe4d239643ffcc4a96d26a9bdaa9709792be0d"
+
+        def install
+          bin.install "gcp-ip-list"
+        end
+      end
+    end
+    if Hardware::CPU.arm?
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/mark-adams/gcp-ip-list/releases/download/v0.0.1/gcp-ip-list_Linux_arm64.tar.gz"
+        sha256 "6ee4edee51f0ff0b4062e6a9eaec35b191d8cfa742dbc9c2b17687042df2ff9e"
+
+        def install
+          bin.install "gcp-ip-list"
+        end
       end
     end
   end
